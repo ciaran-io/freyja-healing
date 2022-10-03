@@ -6,9 +6,9 @@
       "duration": 1,
       "price": 90,
       "benefits": ["helps sleep", "reduce stress", "muscle stiffness"],
-      "description": "Aromatherapy is a treatment using natural essential oils”. These oils are massaged into the skin, & diffused throughout the room . We combine Aromatherapy with a full body message leaving your body & mind revitalized & renewed"
+      "description": "Aromatherapy is a treatment using natural essential oils. These oils are massaged into the skin, & diffused throughout the room . We combine Aromatherapy with a full body message leaving your body & mind revitalized & renewed"
     },
-        {
+    {
       "id": "65c59485-336b-49ff-8f8e-0fcf50444770e",
       "name": "Acupuncture",
       "duration": 1,
@@ -29,7 +29,7 @@
       "name": "Reiki",
       "duration": 1,
       "price": 60,
-      "benefits": ["anxiety", "emotional wellbeing","fatigue"],
+      "benefits": ["anxiety", "emotional wellbeing", "fatigue"],
       "description": "Reiki is a Japanese form of energy healing. Reiki can help reduce stress & anxiety aid the body to become energetically balanced physically, emotionally, spiritually & mentally"
     },
     {
@@ -52,20 +52,17 @@
     {
       "id": "3496f226-329d-4e8d-b9a7-a5380eaa4b4b",
       "title": "Chronic sleep disorders",
-      "description": "whether you need to improve quality of sleep or have a sleep disorder, we can offer a tailored treatments for improved sleep & vitality."
-      
+      "description": "Whether you need to improve quality of sleep or have a sleep disorder, we can offer a tailored treatments for improved sleep & vitality."
     },
     {
       "id": "48a9a828-7bc7-4a88-88ce-6b85f6931828",
       "title": "Irritation, stress & mood",
       "description": "Chronic stress can contribute to poor health & wellbeing. Our Aromatherapy Full Body Massages are prefect to reduce stress & help balance your Qi."
-      
     },
     {
       "id": "a875e2e4-5f19-47da-89b9-067527cf0f9c",
-      "title": "Skin problems & swelling",
+      "title": "Skin problems",
       "description": "Skin problems can often be a sign of toxins accumulating in the body. Reflexology can help bring your body back to balance & optimize your overall health."
-     
     },
     {
       "id": "a7b425dc-4b6d-4ca9-af4e-fc6bc86a4bee",
@@ -78,36 +75,42 @@
       "id": "387dcfe9-c8c8-43cf-815c-95896808a296",
       "name": "Mary",
       "treatment": "Reiki",
-       "review": "I feel renewed, I had a one hour reiki session with Laura & feel amazing! Highly recommend."
+      "review": "I feel renewed, I had a one hour reiki session with Laura & feel amazing! Highly recommend."
     },
     {
       "id": "2cf7b980-46fd-408c-9c80-6a2e91e9fa2c",
       "name": "Alison",
       "treatment": "Acupuncture",
-       "review": "Laura was amazing. I had two sessions so far and my energy has improved so much"
+      "review": "Laura was amazing. I had two sessions so far and my energy has improved so much"
     },
     {
       "id": "9f0a8391-8f55-428d-9fe0-11297f8ed8f4",
       "name": "Sam",
       "treatment": "Full Aromatherapy Including Reflexology",
-       "review": "I can't believe how much better I sleep now. I had one session with Sarah & my sleep has improved along with my stress levels going down."
+      "review": "I can't believe how much better I sleep now. I had one session with Sarah & my sleep has improved along with my stress levels going down."
     }
   ],
   "teamMembers": [
     {
-      "name" : "Laura",
-      "treatments": ["massage", "reiki", "acupuncture"]
-
+      "id": "50bd774e-dadf-4b77-8a3d-ab098d2528b9",
+      "name": "Laura",
+      "role": "Owner",
+      "treatments": ["massage", "reiki", "acupuncture"],
+      "description": "Hi, I'm Laura, I started Fréyja healing over 4 years ago & have been practicing reiki & acupuncture nearly 6 years."
     },
     {
-      "name" : "Sarah",
-      "treatments": ["aromatherapy", "reflexology","pregnancy massage"]
-
+      "id": "602c631b-d3bf-420e-bb99-1c714ac0a430",
+      "name": "Sarah",
+      "role": "Reflexologist",
+      "treatments": ["aromatherapy", "reflexology", "pregnancy massage"],
+      "description": "Hi, I'm Sarah, I joined the team nearly 3 years ago and have a deep passion for holistic healing & reflexology."
     },
     {
-      "name" : "Alex",
-      "treatments": ["message", "reiki"]
-
+      "id": "ec36d847-7f3b-4c42-96cd-f52a33931ab1",
+      "name": "Alex",
+      "role": "Reiki Master",
+      "treatments": ["message", "reiki"],
+      "description": "Hi, I'm Alex, I started my journey in naturopathic healing more then 6 years ago and never looked back. I have a passion for vegan cooking & meditation. "
     }
   ],
   "contactInformation": {
