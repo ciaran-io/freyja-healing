@@ -1,41 +1,20 @@
 <script setup>
-  const props = defineProps({
+  defineProps({
     isHidden: {
       type: Boolean,
       default: true,
     },
-    transitionDuration: {
-      type: Number,
-      default: 0.5,
-      // required: true,
-    },
-    transitionDelay: {
-      type: Number,
-      default: 0,
-      // required: true,
-    },
   })
-  const duration = ref(0)
-  const durationTime = () =>
-    computed(
-      () =>
-        (duration.value = Math.round(
-          props.transitionDelay + props.transitionDelay * 1000
-        ))
-    )
-
-  onMounted(() => durationTime())
 </script>
 
 <template>
   <Transition
     appear
     name="fade"
-    :duration="duration"
   >
     <span
       v-show="!isHidden"
-      class="trans-delay block"
+      class="block"
     >
       <slot></slot>
     </span>
@@ -43,13 +22,9 @@
 </template>
 
 <style>
-  .trans-delay {
-    transition-delay: v-bind(transitionDelay + 's') !important;
-  }
-
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity v-bind(transitionDuration + 's') ease-in;
+    transition: opacity 1s ease-in 1s;
   }
 
   .fade-enter-from,
