@@ -1,10 +1,7 @@
-<script setup></script>
-
 <template>
   <div>
-    Layout: default
+    <TheHeader />
     <slot />
+    <TheFooter />
   </div>
 </template>
-
-<style scoped></style>

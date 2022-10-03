@@ -1,10 +1,8 @@
-<script setup></script>
-
 <template>
   <div>
-    Layout: dynamic
-    <slot />
+    <TheHeader />
+    <div class="pb-12">
+      <slot />
+    </div>
   </div>
 </template>
-
-<style scoped></style>
