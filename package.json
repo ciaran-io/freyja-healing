@@ -1,7 +1,10 @@
 {
-  "private": true,
+  "author": "Ciaran Toner",
+  "version": "1.0.0",
+  "public": true,
   "scripts": {
     "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

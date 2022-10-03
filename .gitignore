@@ -9,3 +9,5 @@ dist
 .eslintrc.yml
 .prettierrc.yml
 .pre-commit-config.yaml
+.editorconfig
+.cz.toml
