@@ -44,7 +44,6 @@
 
       <div
         class="flex flex-wrap gap-y-6 sm:flex-nowrap sm:items-center sm:gap-x-4 md:gap-y-0"
-        aria-label="navigate to page booking or treatments"
       >
         <AppButtonLink
           class="button-rounded-hero button-padding-hero text-lg"
