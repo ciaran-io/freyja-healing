@@ -7,7 +7,7 @@
       required: true,
     },
   })
-
+  // Toggle menu on mobile devices
   function toggleMenu(event) {
     showHiddenContent(event)
   }
@@ -15,25 +15,24 @@
 
 <template>
   <div class="md:row-span-2 md:justify-self-center">
+    <!-- Footer heading & toggle menu on mobile -->
     <FooterHeading
       heading="contact us"
       @toggle-menu="toggleMenu"
     />
-
+    <!--  contact us information (email, number, opening hours) -->
     <div class="hide-on-mobile space-y-4">
-      <template
+      <div
         v-for="(information, value) in contactInformation"
         :key="information"
       >
-        <div>
-          <div class="font-medium capitalize">{{ value }}</div>
-          <div v-if="value !== 'opening hours'">
-            {{ information }}
-          </div>
-
-          <div v-else>{{ information.day }} {{ information.hours }}</div>
+        <div class="font-medium capitalize">{{ value }}</div>
+        <div v-if="value !== 'opening hours'">
+          {{ information }}
         </div>
-      </template>
+
+        <div v-else>{{ information.day }} {{ information.hours }}</div>
+      </div>
     </div>
   </div>
 </template>
