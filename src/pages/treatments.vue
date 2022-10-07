@@ -1,8 +1,4 @@
 <script setup>
-  definePageMeta({
-    layout: 'dynamic',
-  })
-
   useHead({
     title: '- Treatments',
   })
@@ -26,7 +22,7 @@
         (treatment) => treatment.name.toLowerCase() === queryToString.value
       )
 
-      // Update active treatment
+      // Update displayed treatment
       activeTreatment.value = indexOfQuery
     }
   }
@@ -36,43 +32,48 @@
     activeTreatment.value = event
   }
 
-  // if route.query changes call function
+  // if route.query changes update treatment displayed
   watch(
     () => route.query,
     () => updateActiveTreatment()
   )
 
-  // When component mounts call function
+  // When component mounts to DOM updated treatment shown
   onMounted(() => updateActiveTreatment())
 </script>
 
 <template>
-  <div class="container mx-auto mt-16 max-w-5xl space-y-12 pb-8">
+  <div class="container mx-auto mt-16 mb-32 space-y-12 lg:max-w-screen-lg">
     <div>
-      <img
-        class="aspect-square h-96 w-full rounded-base object-cover md:aspect-video"
+      <!-- Treatment image -->
+      <nuxt-img
         src="/images/aromatherapy.jpg"
         alt="aromatherapist adding essential oils to hands"
-        width="1000"
-        height="390"
+        class="h-[400px] w-full rounded-base object-cover"
+        sizes="sm:640px md:100vw lg:976px"
+        width="976"
+        height="400"
+        quality="85"
+        format="webp"
       />
     </div>
+
     <main>
       <section class="space-y-8 md:space-y-12">
         <h1 class="text-center text-5xl">Our Treatments</h1>
-
+        <!-- Treatment select options (mobile only) -->
         <treatmentSelect
           class="md:hidden"
           :treatment-names="treatmentNames"
           @selected="updateSelected"
         />
-
+        <!-- Treatment select options (on larger devices) -->
         <treatmentList
           :treatment-names="treatmentNames"
           :active-treatment="activeTreatment"
           @update:selected="updateSelected"
         />
-
+        <!-- Treatment details -->
         <treatmentDetails :treatment="treatments[activeTreatment]" />
       </section>
     </main>

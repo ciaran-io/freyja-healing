@@ -22,7 +22,7 @@
     >
       <div class="relative h-64 rounded-2xl">
         <div
-          class="relative grid h-full w-full rounded-base bg-[url('/images/treatment.jpg')] bg-cover bg-no-repeat p-2 before:backdrop-blur-sm"
+          class="relative grid h-full w-full rounded-base bg-[url('/images/services.webp')] bg-cover bg-no-repeat p-2 before:backdrop-blur-sm"
         >
           <p
             class="absolute w-full max-w-[30ch] place-self-center rounded-base bg-white/70 p-5 text-center font-medium capitalize"

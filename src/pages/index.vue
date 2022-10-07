@@ -26,8 +26,8 @@
 </script>
 
 <template>
-  <div>
-    <section class="container mx-auto mt-20 space-y-16 md:mt-44 md:w-max">
+  <div class="container mx-auto mb-60 mt-20 md:mt-44">
+    <section class="space-y-16">
       <div class="container-heading">
         <h1 class="text-7xl">
           Fréyja healing
@@ -37,13 +37,14 @@
             name="ic:outline-spa"
           />
         </h1>
+
         <h2 class="text-3xl">
           The essence of health and vitality in one place
         </h2>
       </div>
 
       <div
-        class="flex flex-wrap gap-y-6 sm:flex-nowrap sm:items-center sm:gap-x-4 md:gap-y-0"
+        class="mx-auto flex flex-wrap gap-y-6 sm:flex-nowrap sm:items-center sm:gap-x-4 md:max-w-lg md:gap-y-0"
       >
         <AppButtonLink
           class="button-rounded-hero button-padding-hero text-lg"
@@ -61,9 +62,7 @@
       </div>
     </section>
 
-    <main
-      class="container mx-auto mb-60 mt-64 [&_:not(:first-child)_h2]:text-5xl"
-    >
+    <main class="[&_:not(:first-child)_h2]:text-5xl">
       <!-- conditions section -->
       <section>
         <h2
@@ -90,15 +89,21 @@
       <!-- experience section -->
       <section>
         <h2>Experience & knowledge gained over 4 years</h2>
-        <div class="md:gap-x-8 lg:flex">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div>
-            <img
-              class="rounded-xl"
+            <nuxt-img
               src="/images/treatment.jpg"
-              alt=""
+              alt="aromatherapist adding essential oils to skin with lit candle and flowers in scene"
+              sizes="sm:600px md:100vw lg:730px"
+              width="740"
+              height="496"
+              quality="80"
+              format="webp"
+              class="rounded-xl"
               loading="lazy"
             />
           </div>
+
           <div
             class="mt-6 h-fit space-y-4 rounded-md bg-theme-base-100 p-4 shadow-primary lg:max-w-md"
           >
@@ -108,6 +113,7 @@
               your needs. We believe in treating the individuals body, mind &
               spirit.
             </p>
+
             <app-button-link
               page-link="about-us"
               text="About us"
@@ -132,12 +138,12 @@
       >
         <h2>What our clients say</h2>
         <div
-          class="grid snap-x grid-flow-col gap-x-6 overflow-x-auto rounded-3xl bg-theme-gray pt-8 pb-12 pl-6 shadow-primary md:rounded-3xl md:px-6"
+          class="scroll grid snap-x grid-flow-col gap-x-6 overflow-x-auto rounded-3xl bg-theme-gray px-6 pt-8 pb-12 shadow-primary md:rounded-3xl md:px-6"
         >
           <lazy-information-card
             v-for="review in reviews"
             :key="review.id"
-            class="min-h-[350px] min-w-max snap-center lg:min-w-full"
+            class="min-w-[275px] snap-center lg:min-w-[330px]"
             :heading="review.treatment"
             :description="review.review"
             :is-review="true"
@@ -161,7 +167,7 @@
       space-y-6;
 
     @screen md {
-      @apply pl-2;
+      @apply mx-auto max-w-lg pl-2;
 
       &::before {
         @apply absolute 

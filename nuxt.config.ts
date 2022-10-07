@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   // Nuxt modules
-  modules: ['nuxt-icon', '@nuxtjs/tailwindcss'],
+  modules: ['nuxt-icon', '@nuxtjs/tailwindcss','@nuxt/image-edge'],
 
   // Tailwind module config
   tailwindcss: {
@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     exposeConfig: false,
     viewer: false,
   },
-
   // Meta information
   app: {
     head: {
