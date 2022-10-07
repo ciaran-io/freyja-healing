@@ -65,7 +65,7 @@
       @submit.prevent="emitForm()"
     >
       <!-- user details  -->
-      <TheFormInput
+      <AppFormInput
         v-model="formDataCopy.firstName"
         label="first_name"
         type="text"
@@ -74,7 +74,7 @@
         :required="true"
       />
 
-      <TheFormInput
+      <AppFormInput
         v-model="formDataCopy.lastName"
         label="last_name"
         type="text"
@@ -85,7 +85,7 @@
 
       <!-- pattern from
         https://www.w3schools.com/tags/att_input_pattern.asp -->
-      <TheFormInput
+      <AppFormInput
         v-model="formDataCopy.email"
         label="email"
         type="email"

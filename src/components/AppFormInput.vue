@@ -1,3 +1,4 @@
+// TODO: (Enhancement) Add input validation text beneath input on error
 <script setup>
   defineEmits(['update:modelValue'])
 
@@ -25,6 +26,11 @@
       required: false,
       default: null,
     },
+    title: {
+      type: String,
+      required: false,
+      default: null,
+    },
   })
 
   const labelValue = computed(() => props.label.replace('_', ' '))
@@ -37,6 +43,7 @@
 
 <template>
   <div class="relative">
+    <!-- Base Input & label used throughout application in forms -->
     <label :for="label"> {{ labelValue }} </label>
     <input
       :id="label"
@@ -44,6 +51,7 @@
       :pattern="pattern"
       :required="required"
       :value="modelValue"
+      :title="title"
       @focus="isFocused = true"
       @input="$emit('update:modelValue', $event.target.value)"
       @focusout="checkFocus"
