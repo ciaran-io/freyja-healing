@@ -19,6 +19,7 @@
       class="container relative mx-auto mt-8"
       :class="{ 'flex justify-between': $route.path !== '/' }"
     >
+      <!-- show home link (not on home page) -->
       <NuxtLink
         v-if="$route.path !== '/'"
         to="/"
@@ -33,6 +34,7 @@
         </h1>
       </NuxtLink>
 
+      <!-- show menu on click -->
       <button
         aria-label="open navigation menu"
         class="float-right"
@@ -45,11 +47,9 @@
           viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="menu-icon"
-          :class="{ 'menu-icon-animate': showMenu }"
+          :class="{ animate: showMenu }"
         >
           <g
-            id="nav-button"
             stroke="#7D7777"
             stroke-width="3.5"
             stroke-linecap="round"
@@ -70,6 +70,7 @@
         </svg>
       </button>
 
+      <!-- Nav menu -->
       <NavGlobalMenu
         :show-menu="showMenu"
         :treatments="treatments"
@@ -80,26 +81,29 @@
 </template>
 
 <style scoped lang="postcss">
-  .menu-icon {
+  svg {
     & #line1,
     #line3 {
-      transition: all ease-in-out 0.2s;
+      transition: transform ease-in-out 0.2s;
     }
 
-    &-animate {
-      & #line1,
-      #line3 {
+    &.animate {
+      & #line1 {
+        transform-origin: left 14px;
+      }
+
+      & #line3 {
         transform-origin: left center;
       }
 
       & #line1 {
-        translate: -10% -4%;
         @apply rotate-45;
       }
 
       & #line2 {
         @apply hidden;
       }
+
       & #line3 {
         @apply -rotate-45;
       }
