@@ -11,12 +11,14 @@
 <template>
   <div>
     <label for="treatments">treatments</label>
+    <!-- Update / emit on selected option -->
     <select
       id="treatments"
       name="treatments"
       class="bg-theme-gray capitalize"
-      @change="$emit('selected', $event.target.selectedIndex)"
+      @change="$emit('selected', $event.target.selectedIndex - 1)"
     >
+      <!-- default select option -->
       <option
         disabled
         selected
@@ -24,6 +26,7 @@
       >
         Choose a service
       </option>
+      <!-- treatment options -->
       <option
         v-for="(names, index) in treatmentNames"
         :key="index"
