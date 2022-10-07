@@ -1,8 +1,4 @@
 <script setup>
-  definePageMeta({
-    layout: 'dynamic',
-  })
-
   useHead({
     title: '- Contact us',
     meta: [
@@ -25,16 +21,15 @@
   }
   const formDataName = ref('')
   const isActiveComponent = ref(true)
-
+  // Update formDateName from form data
   function updateFormDataName({ formDetails }) {
-    console.log(formDetails)
     formDataName.value = formDetails.firstName
   }
 </script>
 
 <template>
   <div
-    class="container relative mx-auto my-24 min-h-[1050px] max-w-5xl space-y-16"
+    class="container relative mx-auto my-24 min-h-[1150px] max-w-5xl space-y-16"
   >
     <section class="information-card relative space-y-4 text-center">
       <h1 class="text-lg font-bold">Contact us</h1>
@@ -64,7 +59,7 @@
       </button>
     </section>
 
-    <div class="relative">
+    <main class="relative">
       <Transition
         name="fade"
         mode="out-in"
@@ -89,7 +84,7 @@
           @form-data="updateFormDataName"
         />
       </Transition>
-    </div>
+    </main>
   </div>
 </template>
 

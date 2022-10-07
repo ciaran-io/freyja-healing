@@ -4,6 +4,8 @@ export function showHiddenContent(target) {
   const hiddenContent = button.parentElement.children[2]
   const spacing = 20
 
+  // Set the height of the hidden content to contents scroll height
+  // Rotate icons & setAttributes on buttons
   if (hiddenContent.style.height) {
     hiddenContent.style.height = null
     icon.style.transform = 'rotate(0deg)'

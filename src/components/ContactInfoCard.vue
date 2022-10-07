@@ -19,6 +19,7 @@
     heading="Contact information"
   >
     <div class="flex justify-center">
+      <!-- Contact information -->
       <ul class="space-y-12">
         <template
           v-for="(information, value, index) in contactInformation"
@@ -28,11 +29,13 @@
             v-if="value !== 'opening hours'"
             class="relative flex w-[inherit] items-center gap-x-4"
           >
+            <!-- Contact information icon -->
             <Icon
               aria-hidden="true"
               class="!block h-6 w-6"
               :name="contactIcons[index]"
             />
+
             <span>
               {{ information }}
             </span>
@@ -40,8 +43,8 @@
         </template>
       </ul>
     </div>
-
-    <div class="relative z-10 mt-8 space-x-2 text-right">
+    <!-- Social media icons -->
+    <div class="relative z-10 mt-8 text-right">
       <TheSocialIconBlock />
     </div>
   </ContactContainer>

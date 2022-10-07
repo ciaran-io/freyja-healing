@@ -16,7 +16,7 @@
       v-show="!isHidden"
       class="block"
     >
-      <slot></slot>
+      <slot/>
     </span>
   </Transition>
 </template>
@@ -24,7 +24,7 @@
 <style>
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity 1s ease-in 1s;
+    transition: opacity 1s ease-in;
   }
 
   .fade-enter-from,

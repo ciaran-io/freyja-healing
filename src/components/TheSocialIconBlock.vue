@@ -1,38 +1,53 @@
-<template>
-  <div>
-    <nuxt-link
-      aria-label="link to facebook"
-      to="https://www.facebook.com/"
-      target="_blank"
-    >
-      <Icon
-        class="h-8 w-8"
-        name="entypo-social:facebook"
-    /></nuxt-link>
-    <nuxt-link
-      aria-label="link to instagram"
-      to="https://www.instagram.com/"
-      target="_blank"
-    >
-      <Icon
-        class="h-9 w-9"
-        name="ph:instagram-logo-fill"
-    /></nuxt-link>
+<script setup>
+  const pageLinks = [
+    {
+      label: 'facebook',
+      url: 'https://www.facebook.com/',
+      icon: 'entypo-social:facebook',
+    },
+    {
+      label: 'instagram',
+      url: 'https://www.instagram.com/',
+      icon: 'ph:instagram-logo-fill',
+    },
+    {
+      label: 'twitter',
+      url: 'https://www.twitter.com/',
+      icon: 'entypo-social:twitter',
+    },
+  ]
+</script>
 
+<template>
+  <div class="space-x-4">
     <nuxt-link
-      aria-label="link to instagram"
-      to="https://www.twitter.com/"
+      v-for="link in pageLinks"
+      :key="link.label"
+      :aria-label="`navigate to ${link.label}`"
+      :to="link.url"
       target="_blank"
     >
       <Icon
-        class="h-9 w-9"
-        name="entypo-social:twitter"
+        :data-label="link.label"
+        :name="link.icon"
     /></nuxt-link>
   </div>
 </template>
 
 <style lang="postcss" scoped>
   svg {
-    @apply text-theme-slate;
+    @apply h-9 w-9 text-theme-slate transition-colors duration-300;
+    /* Instagram svg */
+    &[data-label='instagram'] {
+      @apply hover:text-theme-instagram;
+    }
+    /* twitter svg */
+    &[data-label='twitter'] {
+      @apply hover:text-theme-twitter;
+    }
+    /* facebook svg */
+    &[data-label='facebook'] {
+      @apply h-8 w-8 hover:text-theme-facebook;
+    }
   }
 </style>

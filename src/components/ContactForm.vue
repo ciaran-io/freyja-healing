@@ -29,12 +29,7 @@
     new Promise((resolve) => {
       // reset from after 4s
       setTimeout(() => resolve(resetFrom()), 4000)
-    }).then(() =>
-      // remove success message after 6s
-      setTimeout(() => {
-        isSuccessMessage.value = true
-      }, 6000)
-    )
+    })
   }
 
   function formFeedback() {
@@ -46,7 +41,7 @@
   }
 
   function resetFrom() {
-    // reset inout values
+    // reset form inputs
     for (const data in formDataCopy.value) {
       formDataCopy.value[data] = ''
     }

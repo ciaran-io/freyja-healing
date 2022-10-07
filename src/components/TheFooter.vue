@@ -1,15 +1,15 @@
 <script setup>
   import { showHiddenContent } from '~/utils'
 
-  const store = useStore()
-  const { contactInformation } = store.value
+  const store = useStore().value
+  const { contactInformation } = store
 
   const navLinks = new Set(['treatments', 'the team', 'privacy policy'])
-
+  // Replace empty space in nv links with hyphen
   const navLinkUrl = computed(
     () => new Set([...navLinks].map((link) => link.replace(/\s/g, '-')))
   )
-
+  // Toggle footer menu (only on small devices)
   function toggleMenu(event) {
     showHiddenContent(event)
   }
@@ -69,7 +69,7 @@
 
     <!-- copyright text -->
     <div class="space-y-2 text-center">
-      <TheSocialIconBlock class="space-x-4" />
+      <TheSocialIconBlock />
       <div aria-label="copyright text">
         ©2022 Fréyja Healing All rights reserved
       </div>

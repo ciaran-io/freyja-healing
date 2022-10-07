@@ -20,29 +20,20 @@
       @toggle-menu="toggleMenu"
     />
 
-    <div class="hide-on-mobile">
+    <div class="hide-on-mobile space-y-4">
       <template
         v-for="(information, value) in contactInformation"
         :key="information"
       >
-        <div class="mt-3">
+        <div>
+          <div class="font-medium capitalize">{{ value }}</div>
           <div v-if="value !== 'opening hours'">
-            <h4>{{ value }}</h4>
-            <p>{{ information }}</p>
+            {{ information }}
           </div>
 
-          <div v-else>
-            <h4>{{ value }}</h4>
-            <p>{{ information.day }} {{ information.hours }}</p>
-          </div>
+          <div v-else>{{ information.day }} {{ information.hours }}</div>
         </div>
       </template>
     </div>
   </div>
 </template>
-
-<style scoped lang="postcss">
-  h4 {
-    @apply font-medium capitalize;
-  }
-</style>

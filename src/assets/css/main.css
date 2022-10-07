@@ -42,6 +42,7 @@
  ************************** */
 
 @layer base {
+   /*Set scroll behavior */
   html {
     scroll-behavior: smooth;
   }
@@ -57,7 +58,7 @@
   #__nuxt > div {
     @apply flex flex-col;
   }
-
+  /*Set base background color */
   body {
     @apply bg-theme-base;
   }
