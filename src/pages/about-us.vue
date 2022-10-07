@@ -18,7 +18,7 @@
     <nuxt-img
       src="/images/about.jpg"
       alt="Picture of woman gazing into the sunset sitting on bench"
-      class="w-full rounded-base object-cover"
+      class="w-full h-[400px] rounded-base object-cover"
       width="976"
       height="400"
       sizes="sm:640px md:100vw lg:976px"

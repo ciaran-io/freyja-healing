@@ -24,7 +24,7 @@
         v-if="$route.path !== '/'"
         to="/"
       >
-        <h1 class="text-3xl">
+        <h1 class="text-4xl">
           Fréyja healing
           <Icon
             aria-hidden="true"
@@ -35,40 +35,41 @@
       </NuxtLink>
 
       <!-- show menu on click -->
-      <button
-        aria-label="open navigation menu"
-        class="float-right"
-        @click="showMenu = !showMenu"
-      >
-        <svg
-          aria-hidden="true"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          :class="{ animate: showMenu }"
+      <div :class="{ 'w-full text-right': $route.path === '/' }">
+        <button
+          aria-label="open navigation menu"
+          @click="showMenu = !showMenu"
         >
-          <g
-            stroke="#7D7777"
-            stroke-width="3.5"
-            stroke-linecap="round"
+          <svg
+            aria-hidden="true"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            :class="{ animate: showMenu }"
           >
-            <path
-              id="line1"
-              d="M2 2H30.8441"
-            />
-            <path
-              id="line2"
-              d="M8.15594 17H37"
-            />
-            <path
-              id="line3"
-              d="M2 32H30.8441"
-            />
-          </g>
-        </svg>
-      </button>
+            <g
+              stroke="#7D7777"
+              stroke-width="3.5"
+              stroke-linecap="round"
+            >
+              <path
+                id="line1"
+                d="M2 2H30.8441"
+              />
+              <path
+                id="line2"
+                d="M8.15594 17H37"
+              />
+              <path
+                id="line3"
+                d="M2 32H30.8441"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
 
       <!-- Nav menu -->
       <NavGlobalMenu

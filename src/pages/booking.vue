@@ -218,7 +218,7 @@
 
 <template>
   <div
-    class="information-card mx-auto mt-24 space-y-8 lg:min-w-[64rem] lg:max-w-5xl"
+    class="information-card  mt-12 space-y-8 lg:min-w-[64rem] lg:max-w-5xl"
   >
     <h1 class="text-center text-3xl">Booking</h1>
 

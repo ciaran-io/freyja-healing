@@ -30,8 +30,10 @@
 </script>
 
 <template>
-  <div class="lg:!grid w-full lg:place-items-center mt-12 px-3 lg:px-0">
-    <main class="space-y-8 lg:w-8/12 pb-12 lg:pb-0">
+  <div
+    class="mt-12 w-full px-3 pb-12 lg:grid lg:h-screen lg:place-items-center lg:px-0 lg:pb-0"
+  >
+    <main class="space-y-8 lg:w-8/12 lg:max-w-screen-xl">
       <!-- page not found message -->
       <section class="relative h-48 rounded-xl bg-theme-gray p-6 shadow-md">
         <div
@@ -40,7 +42,7 @@
         >
           404
         </div>
-        <h1 class="text-4xl mt-2 md:mt-0">Looks like your lost friend</h1>
+        <h1 class="mt-2 text-4xl md:mt-0">Looks like your lost friend</h1>
         <p class="text-xl">The page your looking for could not be found.</p>
       </section>
       <!-- Navigation for pageLinks -->

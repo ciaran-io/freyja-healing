@@ -42,22 +42,15 @@
  ************************** */
 
 @layer base {
-   /*Set scroll behavior */
+  /*Set scroll behavior */
   html {
     scroll-behavior: smooth;
   }
-  /* body */
-  html,
-  body,
-  #__nuxt,
-  #__nuxt > div {
+  /* keep footer to bottom of page */
+  body html {
     @apply h-full;
   }
 
-  /* keep footer to bottom of page */
-  #__nuxt > div {
-    @apply flex flex-col;
-  }
   /*Set base background color */
   body {
     @apply bg-theme-base;

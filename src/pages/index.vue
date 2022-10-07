@@ -26,8 +26,8 @@
 </script>
 
 <template>
-  <div class="container mx-auto mb-60 mt-20 md:mt-44">
-    <section class="space-y-16">
+  <div class="container mx-auto my-20 ">
+    <section class="space-y-16 ">
       <div class="container-heading">
         <h1 class="text-7xl">
           Fréyja healing

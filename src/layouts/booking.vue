@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-8">
+  <div class="container mx-auto my-8">
     <header class="text-center">
       <nav>
         <NuxtLink
