@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     container: {
-      padding: '0.5rem',
+      padding: '0.85rem',
     },
     extend: {
       backgroundColor: {
@@ -31,6 +31,10 @@ module.exports = {
 
         'theme-slate': 'var(--theme-slate)',
         'theme-slate-100': 'var(--theme-slate-100)',
+
+        'theme-facebook': 'var(--facebook)',
+        'theme-twitter': 'var(--twitter)',
+        'theme-instagram': 'var(--instagram)',
       },
       spacing: {
         gutter: 'var(--gutter)',

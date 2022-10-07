@@ -16,7 +16,12 @@
   --theme-gray-100: hsl(216, 12%, 84%);
 
   --theme-slate: hsl(215, 25%, 24%);
-  --theme-slate-100: hsl(210, 7%, 17%);
+  --theme-slate-100: hsl(215, 25%, 27%);
+
+  /* social media colors */
+  --facebook: hsl(220, 46%, 48%);
+  --instagram: hsl(276, 51%, 47%);
+  --twitter: hsl(203, 89%, 53%);
 
   /* shadows */
   --shadow-base-1: 7px 7px 10px hsl(48, 2%, 47%);
@@ -37,6 +42,9 @@
  ************************** */
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   /* body */
   html,
   body,
@@ -88,6 +96,10 @@
   input,
   textarea {
     @apply bg-theme-gray;
+  }
+
+  input:is(:invalid) {
+    @apply ring-red-500;
   }
 
   select {
@@ -143,7 +155,7 @@
 
   .information-card {
     box-shadow: inset var(--shadow-base-1), inset var(--shadow-base-2);
-    @apply rounded-xl bg-theme-gray px-8 py-8;
+    @apply rounded-xl bg-theme-gray px-6 py-8;
   }
 
   .menu-heading {
