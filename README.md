@@ -251,3 +251,75 @@ Desktop
 [🔝 Back to Top](#fréyja-healing)
 
 ---
+
+## **Technologies** ⚙️
+
+### Web development
+
+- ![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+
+  - [Code editor & IntelliSense for VusJs & Tailwind CSS ](https://code.visualstudio.com) 🔗
+
+- ![Version control](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+  - [Used as version control system](https://git-scm.com) 🔗
+
+### Design
+
+- ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+  - [Used for designing wireframes](https://www.figma.com) 🔗
+
+<br>
+
+### Front-End Technologies
+
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+  - Markup language used within VueJS templates.
+
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+  - Used to style elements within pages & add transition effects.
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+  - Used to add reactivity.
+  - From validation (client side)
+  - Return data based on query parameters
+
+#### Ui Library / CSS framework
+
+- ![Tailwind css](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+  - [Tailwindcss](https://tailwindcss.com/docs/cursor) 🔗 (Used to enhance workflow & improve maintainability of CSS).
+
+<br>
+
+#### JavaScript Library
+
+- ![VueJs](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
+  - [Vue.js](https://vuejs.org) 🔗 (The Progressive JavaScript Framework)
+  - Reactivity.
+  - Reusable components.
+
+<br>
+
+### JavaScript Framework
+
+- [NuxtJS](https://nuxtjs.org/deployments/github-pages) 🔗 (The Intuitive Vue Framework)
+  - Used for server side rendering.
+  - Enhanced SEO.
+  - Image optimization.
+  - Code optimization (minified CSS & JavaScript).
+  - State management.
+
+### Additional modules to extend NuxtJs 🔌
+
+1. [NuxtJS Modules](https://modules.nuxtjs.org/) 🔗 (Extends NuxtJS functionality)
+   - [Nuxt Icon](https://github.com/nuxt-modules/icon) 🔗 Used to generate Icons for project.
+   - [Nuxt image](https://image.nuxtjs.org/) 🔗 Used to optimize images for variable screen sizes & convert to [webp](https://developers.google.com/speed/webp) image format.
+
+<br>
+
+2. [VueJS devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en) 🔗 Used to inspect debug VueJS (performance issues & reactivity issues)
+
+<br>
+
+[🔝 Back to Top](#fréyja-healing)
+
+---
