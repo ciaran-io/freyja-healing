@@ -12,12 +12,9 @@
     appear
     name="fade"
   >
-    <span
-      v-show="!isHidden"
-      class="block"
-    >
-      <slot/>
-    </span>
+    <div v-show="!isHidden">
+      <slot />
+    </div>
   </Transition>
 </template>
 
