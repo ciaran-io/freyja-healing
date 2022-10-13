@@ -323,3 +323,337 @@ Desktop
 [🔝 Back to Top](#fréyja-healing)
 
 ---
+
+## Testing 🧪
+
+### 1. Page speed metrics & SEO analytics
+
+[Google page speed insight](https://pagespeed.web.dev) (Used for testing performance & SEO) 🔗
+
+Mobile
+
+<details>
+<summary>About us</summary>
+
+![About us](docs/testing/google/ps-about-mobile.webp)
+
+</details>
+
+<details>
+<summary>Booking</summary>
+
+![Booking](docs/testing/google/ps-booking-mobile.webp)
+
+</details>
+
+<details>
+<summary>Contact</summary>
+
+![Contact](docs/testing/google/ps-contact-mobile.webp)
+
+</details>
+
+<details>
+<summary>Home</summary>
+
+![Home](docs/testing/google/ps-home-mobile.webp)
+
+</details>
+
+<details>
+<summary>Privacy</summary>
+
+![Privacy](docs/testing/google/ps-privacy-mobile.webp)
+
+</details>
+
+<details>
+<summary>The team</summary>
+
+![The team](docs/testing/google/ps-the-team-mobile.webp)
+
+</details>
+
+<details>
+<summary>Treatments</summary>
+
+![Treatments](docs/testing/google/ps-tretments-mobile.webp)
+
+</details>
+
+---
+
+Desktop
+
+<details>
+<summary>About us</summary>
+
+![About us](docs/testing/google/ps-about-desktop.webp)
+
+</details>
+
+<details>
+<summary>Booking</summary>
+
+![Booking](docs/testing/google/ps-booking-desktop.webp)
+
+</details>
+
+<details>
+<summary>Contact</summary>
+
+![Contact](docs/testing/google/ps-contact-desktop.webp)
+
+</details>
+
+<details>
+<summary>Home</summary>
+
+![Home](docs/testing/google/ps-home-desktop.webp)
+
+</details>
+
+<details>
+<summary>Privacy</summary>
+
+![Privacy](docs/testing/google/ps-privacy-desktop.webp)
+
+</details>
+
+<details>
+<summary>The team</summary>
+
+![The team](docs/testing/google/ps-the-team-desktop.webp)
+
+</details>
+
+<details>
+<summary>Treatments</summary>
+
+![Treatments](docs/testing/google/ps-tretments-desktop.webp)
+
+</details>
+<br>
+
+### 2. Browser Testing
+
+> ![note icon](docs/icons/note.svg) **NOTE** <br>
+> I tested responses in Firefox Developer & Google Chrome from 300px to 1200px & Iphone for mobile device testing.
+
+#### Firefox Developer Edition (v.108.0.5343.2)
+
+> ![note icon](docs/icons/note.svg) **NOTE** <br>
+> knowledge of accessibility is limited, application will need audit at later date to improve accessibility for screen readers.
+
+- Check for overflow issues.
+  1. Home page information cards overflow at 300px
+- Check for accessibility issues (contrasting colors).
+  1. None found
+
+---
+
+#### Google Chrome Dev (v.108.0.5343.2)
+
+> ![note icon](docs/icons/note.svg) **NOTE** <br>
+> knowledge of unit testing is limited, application will need unit testing at later date.
+
+> ![information icon](docs/icons/information.svg) **INFORMATION** <br>
+> NuxtJS & [Vite](https://vitejs.dev/) provide excellent development experience & detailed errors in development.
+
+- Check for JavaScript errors
+  1. All known errors resolved in development.
+
+---
+
+#### Safari iOS (v16.0.2)
+
+> ![bug icon](docs/icons/bug.svg) **BUG CSS** <br>
+> is() CSS pseudo-class does not work on invalid form input.
+
+- View mobile experience (validate page links work & inputs on forms)
+
+<br>
+
+### 3. Form validation (Manual input to check validity of forms)
+
+> ![note icon](/docs/icons/note.svg) **NOTE** <br>
+> Input validation is based on pattern attribute value
+
+1. Contact us page: The form will not send unless the following rules are met.
+
+- First & last name: (Required) must have 2 - 20 characters using alphabetic notation only.
+- Email: (Required) must be a valid email address & math pattern.
+- Service option: (Not required) Choose a service are predefined options.
+- User message: (Required) must be 5 - 300 characters.
+
+2. Booking page: The form will not send unless the following rules are met.
+
+- Name: (Required) must have 2 - 20 characters using alphabetic notation only.
+- Email: (Required) must be a valid email address & math pattern.
+- Phone number: (Required) must be numeric only and 5 - 10 characters.
+- Calender: (Required) Choose date, calender is not viewable beyond December 2022 & before the current month of the current year.
+- Time: (Required) Time must be between 9AM - 5PM, 9AM is predefined input if no time is chosen.
+- Booking confirmation details: Check users details are correct.
+  - Name
+  - Email
+  - Phone number
+  - Appointment date
+  - Appointment time
+
+<br>
+
+### External Validation Testing HTML | CSS | JavaScript
+
+> ![tip icon](docs/icons/tip.svg) **Important** <br>
+> HTML & CSS validation returns 54 CSS parsing errors. This issue is discussed by the maintainer of Tailwindcss & has provided a solution however,
+> <br>
+> I cannot use the recommended fix as I use scoped styles within VueJS. This will break styles used within the application.
+> [Remove --tw- variables from universal selector #7317](https://github.com/tailwindlabs/tailwindcss/discussions/7317) 🔗
+
+#### 1. HTML
+
+[W3C Markup Validation](https://validator.w3.org/) 🔗 (Validate HTML)
+
+<details>
+<summary>About us page</summary>
+
+![About us](docs/testing/validation/w3-about-us.webp)
+
+</details>
+
+<details>
+<summary>Booking page</summary>
+
+![Booking](docs/testing/validation/w3-booking.webp)
+
+</details>
+
+<details>
+<summary>Contact page</summary>
+
+![Contact](docs/testing/validation/w3-contact.webp)
+
+</details>
+
+<details>
+<summary>Home page</summary>
+
+![home](docs/testing/validation/w3-home.webp)
+
+</details>
+
+<details>
+<summary>The team page</summary>
+
+![The team](docs/testing/validation/w3-the-team.webp)
+
+</details>
+
+<details>
+<summary>Treatments page</summary>
+
+![Treatments page](docs/testing/validation/w3-treatments.webp)
+
+</details>
+
+<br>
+
+#### 2. CSS
+
+[W3C CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_upload) 🔗 (Validate CSS)
+
+<details>
+<summary>About us page</summary>
+
+![About us](docs/testing/validation/w3c-css-about-us.png)
+
+</details>
+
+<details>
+<summary>Booking page</summary>
+
+![Booking](docs/testing/validation/w3c-css-booking.png)
+
+</details>
+
+<details>
+<summary>Contact page</summary>
+
+![Contact](docs/testing/validation/w3c-css-contact.png)
+
+</details>
+
+<details>
+<summary>Home page</summary>
+
+![home](docs/testing/validation/w3c-css-home.png)
+
+</details>
+
+<details>
+<summary>The team page</summary>
+
+![The team](docs/testing/validation/w3c-css-the-team.png)
+
+</details>
+
+<details>
+<summary>Treatments page</summary>
+
+![Treatments page](docs/testing/validation/w3c-css-treatments.png)
+
+</details>
+
+<br>
+
+#### 3. JavaScript
+
+[JS Hint](https://jshint.com) 🔗 (Validate JavaScript)
+
+I added the following rule to ignore missing semicolons and test for ECMAScript 9 support.
+
+```javascript
+/* jslint asi: true, esversion: 9 */
+```
+
+Not all VueJS files contain JavaScript that can be tested with JS Hint. I tested the following files.
+
+- Pages
+
+  - contact.vue
+  - booking.vue
+  - treatments.vue
+
+- Components
+
+  - AppFormInput.vue
+  - ContactForm.vue
+  - TheFooter.vue
+
+- Composables
+  - Services.js
+
+<details>
+<summary>Js Hint results</summary>
+
+![Js Hint results](docs/testing/js-hint.png)
+
+</details>
+
+### Development Automated Testing | Linting
+
+> ![important icon](docs/icons/tip.svg) **Important** <br>
+> NuxtJS auto imports VusJS components, Eslint will display no-undefined warnings, I have yet to find a fix for this.<br>[Nuxt Auto imports](https://v3.nuxtjs.org/guide/concepts/auto-imports) 🔗
+
+VueJS & JavaScript
+
+I added Eslint & Eslint-plugin-vue to validate & check for errors during development as well as follow VueJS best practices based on
+[VusJs style guide](https://vuejs.org/style-guide/rules-essential.html). Linting errors are shown in visual studio code terminal.
+
+1. [Eslint Plugin Vue](https://eslint.vuejs.org/)
+
+<br>
+
+[🔝 Back to Top](#fréyja-healing)
+
+---
