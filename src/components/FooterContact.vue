@@ -21,18 +21,21 @@
       @toggle-menu="toggleMenu"
     />
     <!--  contact us information (email, number, opening hours) -->
-    <div class="hide-on-mobile space-y-4">
-      <div
+    <dl
+      aria-label="contact information"
+      class="hide-on-mobile [&_dt:not(:first-child)]:pt-2"
+    >
+      <template
         v-for="(information, value) in contactInformation"
         :key="information"
       >
-        <div class="font-medium capitalize">{{ value }}</div>
-        <div v-if="value !== 'opening hours'">
+        <dt class="font-medium capitalize">{{ value }}</dt>
+        <dd v-if="value !== 'opening hours'">
           {{ information }}
-        </div>
+        </dd>
 
-        <div v-else>{{ information.day }} {{ information.hours }}</div>
-      </div>
-    </div>
+        <dd v-else>{{ information.day }} {{ information.hours }}</dd>
+      </template>
+    </dl>
   </div>
 </template>
