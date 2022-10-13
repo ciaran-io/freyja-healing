@@ -11,3 +11,4 @@ dist
 .pre-commit-config.yaml
 .editorconfig
 .cz.toml
+.DS_Store
