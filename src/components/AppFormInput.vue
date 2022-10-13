@@ -32,13 +32,9 @@
       default: null,
     },
   })
-
+  // Replace all label underscore with empty space
   const labelValue = computed(() => props.label.replace('_', ' '))
   const isFocused = ref(false)
-
-  function checkFocus(event) {
-    event.target.value ? (isFocused.value = true) : (isFocused.value = false)
-  }
 </script>
 
 <template>
@@ -53,8 +49,8 @@
       :value="modelValue"
       :title="title"
       @focus="isFocused = true"
+      @focusout="$event.target.value ? (isFocused = true) : (isFocused = false)"
       @input="$emit('update:modelValue', $event.target.value)"
-      @focusout="checkFocus"
     />
     <span
       aria-hidden="true"
