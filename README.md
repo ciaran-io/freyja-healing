@@ -191,3 +191,63 @@ Desktop
 </details>
 
 ---
+
+## **Features** ✨
+
+### 1. Book appointment
+
+- Users can choose from any of our 6 appointments & place a booking. The user is required to enter the following:
+  - Name
+  - Email
+  - Contact number
+  - Choose a time & date
+  - Submit after verifying their details are correct
+
+### 2. View all services
+
+- View all services with an overview of the following INFORMATION
+  - Treatment Details
+    - Treatment
+    - Treatment duration
+    - Treatment Price
+  - A list of benefits of the treatment
+  - Treatment brief description
+
+### 3. Send inquiry
+
+- Users can send inquiry about any of the services offered with the following INFORMATION
+  - Name
+  - Email
+  - service
+  - Short message
+
+### 4. Navigation flyout menu
+
+- Users can easily navigate to any of the available services.
+- Users can easily navigate to the contact page.
+- Users can easily navigate to the about us page.
+
+---
+
+## **Future features** 🔮 (2023)
+
+- ❌ Add uniques image for each available service.
+- ❌ Improve SEO (Add open graph meta information).
+- ❌ Receive email appointment confirmation.
+- ❌ Receive email contact form confirmation.
+- ❌ Setup payment processing.
+- ❌ Add account page for users:
+  - User can view account information
+  - User can place booking via payment method
+  - User can write review
+- ❌ Improve security:
+  - Add Cloudflare Turnstile (privacy focused captcha).
+  - Protect mailto address (further research needed).
+  - Add Content Security Policy (further research needed).
+- ❌ Add unit testing & CI workflow (further research needed)
+
+<br>
+
+[🔝 Back to Top](#fréyja-healing)
+
+---
