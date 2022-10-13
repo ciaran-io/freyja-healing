@@ -26,15 +26,13 @@
     emit('formData', { formDetails: formDataCopy.value })
     formFeedback()
 
-    new Promise((resolve) => {
-      // reset from after 4s
-      setTimeout(() => resolve(resetFrom()), 4000)
-    })
+    // reset from after 2.5s
+    setTimeout(() => resetFrom(), 2500)
   }
 
   function formFeedback() {
     formSubmitting.value = true
-
+    // set form submitting to false after 2.5s
     setTimeout(() => {
       formSubmitting.value = false
     }, 2500)
@@ -43,7 +41,7 @@
   function resetFrom() {
     // reset form inputs
     for (const data in formDataCopy.value) {
-      formDataCopy.value[data] = ''
+      if (formDataCopy.value[data]) formDataCopy.value[data] = ''
     }
     // reset select value
     form.value.elements.namedItem('treatments').selectedIndex = 0
@@ -105,10 +103,11 @@
         <textarea
           id="message"
           v-model="formDataCopy.message"
-          type="text"
           required
           placeholder="Your message.."
           rows="10"
+          maxlength="500"
+          minlength="10"
         />
       </div>
 
