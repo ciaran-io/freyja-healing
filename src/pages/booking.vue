@@ -1,5 +1,5 @@
-//TODO:(Refactor) booking steps into separate components. 
-//TODO:(Enhancement) Setup email confirmation for booking.
+//TODO:(Refactor) booking steps into separate components. //TODO:(Enhancement)
+Setup email confirmation for booking.
 <script setup>
   definePageMeta({
     layout: 'booking',
@@ -58,8 +58,8 @@
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
   const activeComponent = ref(0)
-  const isNextEnabled = ref(false)
-  const isPreviousEnabled = ref(true)
+  const isNextEnabled = ref(true)
+  const isPreviousEnabled = ref(false)
 
   const form = ref(null)
   const appointmentTime = ref(null)
@@ -69,29 +69,37 @@
   const counter = ref(0)
   const countdownTime = ref(10)
 
-  // Check if date, month & year matches users selected date
+  // return true if selectedDate == calendarDate
   const highlightCalendarDate = (date) => {
     if (selectedDate.value !== null)
-      return selectedDate.value.getMonth() === calendarMonth.value &&
+      if (
+        selectedDate.value.getMonth() === calendarMonth.value &&
         selectedDate.value.getDate() === date &&
         selectedDate.value.getFullYear() === calendarYear.value
-        ? true
-        : false
+      )
+        return true
+      else {
+        return false
+      }
   }
 
   // Calender mutations
 
   // Display next month in calendar
   function viewNextMonth() {
-    getCalenderDates(calendarYear.value, calendarMonth.value)
-    calendarMonth.value++
+    getCalenderDates(calendarYear.value, calendarMonth.value) // Get next month dates
+    calendarMonth.value++ // Increase calendar month
     SetCalendarStartDate()
 
+    // Increment calendar year if calendarMonth is less than one
     if (calendarMonth.value >= 12) {
       calendarMonth.value = 0
       calendarYear.value++
     }
-    disableDate()
+    // Prevent viewing dates in the calendar that are before current month of current year
+    return calendarYear.value === calendarEnd && calendarMonth.value === 11
+      ? (isNextEnabled.value = false)
+      : ((isNextEnabled.value = true), (isPreviousEnabled.value = true))
   }
 
   // Display previous month in calendar
@@ -100,11 +108,17 @@
     calendarMonth.value--
     SetCalendarStartDate()
 
+    // Decrement calendar year if calendarMonth is less than one
     if (calendarMonth.value < 1) {
       calendarMonth.value = 11
       calendarYear.value--
     }
-    disableDate()
+
+    // Prevent viewing dates in the calendar that have passed calendarEnd
+    return calendarMonth.value <= currentMonth &&
+      calendarYear.value === currentYear
+      ? (isPreviousEnabled.value = false)
+      : ((isPreviousEnabled.value = true), (isNextEnabled.value = true))
   }
 
   // update booking date selected details with selected date
@@ -119,25 +133,12 @@
       bookingDetails.value.dateSelected.toDateString()
   }
 
-  // Disable calendar function if conditions are met
-  function disableDate() {
-    // Prevent user from viewing dates in the calendar that have passed
-    calendarMonth.value <= currentMonth && calendarYear.value === currentYear
-      ? (isPreviousEnabled.value = true)
-      : (isPreviousEnabled.value = false)
-
-    // Prevent user from viewing dates in the calendar that are further than December 20200
-    calendarYear.value === calendarEnd && calendarMonth.value === 11
-      ? (isNextEnabled.value = true)
-      : (isNextEnabled.value = false)
-  }
-
   // Return year & month based on input
   function getCalenderDates(currentYear, currentMonth) {
     return (dates.value = new Date(currentYear, currentMonth + 1, 0).getDate())
   }
 
-  // Set calendar start date using calender month start date
+  // Set calendar date for each month
   function SetCalendarStartDate() {
     return (calenderStartDate.value = new Date(
       calendarYear.value,
@@ -149,7 +150,7 @@
   // Check form is valid
   // show errorMessage if invalid
   function validateUserInput() {
-    form.value.checkValidity()
+    return form.value.checkValidity()
       ? ((errorMessage.value = false), (activeComponent.value = 1))
       : (errorMessage.value = true)
   }
@@ -157,8 +158,8 @@
   // Check input date and time is valid
   // show errorMessage if invalid
   function validateUserDate() {
-    bookingDetails.value.dateSelected.length &&
-    appointmentTime.value.validity.valid
+    return bookingDetails.value.dateSelected.length &&
+      appointmentTime.value.validity.valid
       ? (errorMessage.value = false)
       : (errorMessage.value = true)
   }
@@ -218,7 +219,7 @@
 
 <template>
   <div
-    class="information-card  mt-12 space-y-8 lg:min-w-[64rem] lg:max-w-5xl"
+    class="information-card mx-auto mt-12 space-y-8 lg:min-w-[64rem] lg:max-w-5xl"
   >
     <h1 class="text-center text-3xl">Booking</h1>
 
@@ -334,7 +335,7 @@
             <div class="grid grid-cols-[auto,1fr,auto] items-center px-2">
               <!-- view previous calendar month -->
               <button
-                :disabled="isPreviousEnabled"
+                :disabled="!isPreviousEnabled"
                 aria-label="view previous months calender  "
                 class="disabled:text-gray-600/40"
                 @click="viewPreviousMonth"
@@ -355,7 +356,7 @@
               <!-- view next calendar month -->
               <button
                 aria-label="view next months calender "
-                :disabled="isNextEnabled"
+                :disabled="!isNextEnabled"
                 class="disabled:text-gray-600/40"
                 @click="viewNextMonth"
               >
