@@ -56,7 +56,10 @@ As a user, customer I would like to the following:
 
 - I chose to use default browser fonts & not to use a custom font.
 
-#### Wireframes
+#### Wireframes (High fidelity)
+
+> ![note icon](docs/icons/note.svg) **NOTE** <br>
+These wireframes are exported wireframes from Figma. They are not screenshots from a browser.
 
 Mobile
 
@@ -144,7 +147,7 @@ Desktop
 <details>
 <summary>Booking page (confirmation)</summary>
 
-![Booking page (confirmation)](docs/design/wireframes/desktop/booking-confirmation-desktop.png)
+![Booking page (confirmation)](docs/design/wireframes/desktop/booking-step-confirm-desktop.png)
 
 </details>
 
@@ -186,7 +189,7 @@ Desktop
 <details>
 <summary>Treatment page</summary>
 
-![Treatment page](docs/design/wireframes/desktop/treatment-desktop.png)
+![Treatment page](docs/design/wireframes/desktop/treatments-desktop.png)
 
 </details>
 
@@ -196,6 +199,8 @@ Desktop
 
 ### 1. Book appointment
 
+![Book Appointment](/docs/testing/screenshots/booking-screenshot.png)
+
 - Users can choose from any of our 6 appointments & place a booking. The user is required to enter the following:
   - Name
   - Email
@@ -204,6 +209,8 @@ Desktop
   - Submit after verifying their details are correct
 
 ### 2. View all services
+
+![View all services](/docs/testing/screenshots/treatments-snapshot.png)
 
 - View all services with an overview of the following INFORMATION
   - Treatment Details
@@ -215,6 +222,8 @@ Desktop
 
 ### 3. Send inquiry
 
+![View all services](/docs/testing/screenshots/contact-us-screenshot.png)
+
 - Users can send inquiry about any of the services offered with the following INFORMATION
   - Name
   - Email
@@ -222,6 +231,8 @@ Desktop
   - Short message
 
 ### 4. Navigation flyout menu
+
+![View all services](/docs/testing/screenshots/flyout-menu-screenshot.png)
 
 - Users can easily navigate to any of the available services.
 - Users can easily navigate to the contact page.
@@ -439,6 +450,27 @@ Desktop
 
 > ![note icon](docs/icons/note.svg) **NOTE** <br>
 > I tested responses in Firefox Developer & Google Chrome from 300px to 1200px & Iphone for mobile device testing.
+
+<details>
+<summary>Iphone SE responsive screenshot</summary>
+
+![sss](docs/testing/screenshots/responsive-test-iphone-se.png)
+
+</details>
+
+<details>
+<summary>Ipad responsive screenshot</summary>
+
+![sss](docs/testing/screenshots/responsive-test-ipad.jpg)
+
+</details>
+
+<details>
+<summary>Desktop responsive screenshot</summary>
+
+![sss](docs/testing/screenshots/responsive-test-desktop.jpg)
+
+</details>
 
 #### Firefox Developer Edition (v.108.0.5343.2)
 
