@@ -511,6 +511,20 @@ Desktop
 > ![note icon](/docs/icons/note.svg) **NOTE** <br>
 > Input validation is based on pattern attribute value
 
+<details>
+<summary>Form input testing booking</summary>
+
+![sss](docs/testing/screenshots/input-testing-screenshot-booking.png)
+
+</details>
+
+<details>
+<summary>Form input testing contact</summary>
+
+![sss](docs/testing/screenshots/input-testing-screenshot-contact.png)
+
+</details>
+
 1. Contact us page: The form will not send unless the following rules are met.
 
 - First & last name: (Required) must have 2 - 20 characters using alphabetic notation only.
