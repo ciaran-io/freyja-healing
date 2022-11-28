@@ -47,14 +47,14 @@
     <div>
       <!-- Treatment image -->
       <nuxt-img
-        src="/images/aromatherapy.jpg"
+        provider="cloudinary"
+        src="/aromatherapy.jpg"
         alt="aromatherapist adding essential oils to hands"
         class="h-[400px] w-full rounded-base object-cover"
         sizes="sm:640px md:100vw lg:976px"
         width="976"
         height="400"
-        quality="85"
-        format="webp"
+        :modifiers="{ f: 'auto', q: '85' }"
       />
     </div>
 

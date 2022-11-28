@@ -48,4 +48,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  // Nuxt image config
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/c-io/image/upload/v1669659136/ci-project-1/',
+    }
+  }
 })

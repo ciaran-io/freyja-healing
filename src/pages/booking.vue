@@ -294,14 +294,13 @@ Setup email confirmation for booking.
         <div class="space-y-6">
           <div>
             <nuxt-img
-              src="/images/massage.jpg"
+              provider="cloudinary"
+              src="/massage.jpg"
               alt="client receiving head massage in low lit room"
               class="mx-auto h-64 w-full rounded-base object-cover"
               width="420"
               height="256"
-              sizes="sm:520px md:645px lg:418px"
-              quality="85"
-              format="webp"
+              :modifiers="{ f: 'auto', q: '85' }"
             />
           </div>
 

@@ -23,13 +23,13 @@
         >
           <!-- Team member image -->
           <nuxt-img
-            :src="`/images/${teamImage[index]}.jpg`"
+            provider="cloudinary"
+            :src="`/${teamImage[index]}.jpg`"
             :alt="`profile picture of ${member.name}`"
-            format="webp"
-            quality="80"
-            class=" rounded-base object-cover lg:h-[360px]"
+            class="rounded-base object-cover lg:h-[360px]"
             height="330"
             width="590"
+            :modifiers="{ f: 'auto', q: '85' }"
           />
 
           <!-- Team member name and role -->

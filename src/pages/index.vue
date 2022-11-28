@@ -26,8 +26,8 @@
 </script>
 
 <template>
-  <div class="container mx-auto my-20 ">
-    <section class="space-y-16 ">
+  <div class="container mx-auto my-20">
+    <section class="space-y-16">
       <div class="container-heading">
         <h1 class="text-7xl">
           Fréyja healing
@@ -92,15 +92,14 @@
         <div class="lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div>
             <nuxt-img
-              src="/images/treatment.jpg"
+              provider="cloudinary"
+              src="/treatment.jpg"
               alt="aromatherapist adding essential oils to skin with lit candle and flowers in scene"
-              sizes="sm:600px md:100vw lg:730px"
               width="740"
               height="496"
-              quality="80"
-              format="webp"
               class="rounded-xl"
               loading="lazy"
+              :modifiers="{ f: 'auto', q: '85' }"
             />
           </div>
 

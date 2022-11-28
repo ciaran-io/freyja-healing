@@ -16,14 +16,13 @@
     <h1 class="text-center text-6xl">Our Story</h1>
 
     <nuxt-img
-      src="/images/about.jpg"
+      provider="cloudinary"
+      src="/about.jpg"
       alt="Picture of woman gazing into the sunset sitting on bench"
       class="w-full h-[400px] rounded-base object-cover"
       width="976"
       height="400"
-      sizes="sm:640px md:100vw lg:976px"
-      format="webp"
-      quality="85"
+      :modifiers="{ f: 'auto', q: '85' }"
     />
 
     <main class="information-card mx-auto space-y-4 lg:max-w-4xl">
